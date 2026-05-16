@@ -312,6 +312,17 @@ CALCULATE(
 
 ---
 
+## Business Impact
+
+This project demonstrates how analytics can:
+- reduce churn
+- improve customer retention
+- identify high-value customers
+- optimize retention budgets
+- increase recurring revenue
+
+---
+
 ## 💡 Business Recommendations
 
 ### 1. Contract Conversion Campaign — Highest ROI
