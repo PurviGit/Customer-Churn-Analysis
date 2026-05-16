@@ -26,7 +26,7 @@ This project finds them. Predicts them. Tells the business exactly what to do ab
 | ![Page1](dashboard/screenshots/page1_executive.png) | ![Page2](dashboard/screenshots/page2_drivers.png) | ![Page3](dashboard/screenshots/page3_revenue.png) |
 | 5 KPI cards · Donut · Bar · Revenue split           | Tenure · Payment · Matrix · Services · Billing    | Slider simulation · Gauge · Scenario table        |
 
-> 📥 **Download the full interactive dashboard:** [`Churn_Dashboard.pbix`](dashboard/Churn_Dashboard.pbix) | [`Churn_Dashboard.pdf`](dashboard/Churn_Dashboard.pdf)
+> 📥 **Download the full interactive dashboard:** [`Customer Churn Analysis.pbix`](dashboard/Customer Churn Analysis.pbix) | [`Customer Churn Analysis1.pdf`](dashboard/Customer Churn Analysis1.pdf)
 
 ---
 
