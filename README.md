@@ -19,6 +19,18 @@ This project finds them. Predicts them. Tells the business exactly what to do ab
 
 ---
 
+## Skills Demonstrated
+
+- SQL (CTEs, Window Functions, Joins)
+- Data Cleaning & EDA
+- Business KPI Analysis
+- Power BI Dashboarding
+- Predictive Modeling
+- Revenue Impact Analysis
+- Customer Segmentation
+
+---
+
 ## 📸 Dashboard — All 3 Pages
 
 | Page 1 — Executive Overview                         | Page 2 — Churn Drivers                            | Page 3 — Revenue & What-If                        |
@@ -390,11 +402,6 @@ jupyter notebook
 **Purvi Porwal** — Data Analyst | SQL · Python · Power BI
 
 B.Tech Information Technology · Rajasthan Technical University, Kota · **CGPA 9.69/10**
-
-**Internship experience:**
-
-- **Shell India Markets Pvt. Ltd.** — Queried 50,000+ EV records in SQL, built Streamlit forecasting dashboard, detected 1,200+ data quality issues
-- **Infosys Springboard 6.0** — Built loan default prediction model (87% accuracy, 67% false positive reduction), delivered quarterly risk report
 
 📧 purviporwal46@gmail.com
 💼 [LinkedIn](https://linkedin.com/in/purvi-porwal-a6554a258)
