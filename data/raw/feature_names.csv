@@ -1,0 +1,31 @@
+0
+SeniorCitizen
+Partner
+Dependents
+tenure
+PhoneService
+OnlineSecurity
+OnlineBackup
+DeviceProtection
+TechSupport
+StreamingTV
+StreamingMovies
+PaperlessBilling
+MonthlyCharges
+TotalCharges
+AvgMonthlySpend
+NumServices
+IsHighValue
+gender_Male
+MultipleLines_No phone service
+MultipleLines_Yes
+InternetService_Fiber optic
+InternetService_No
+Contract_One year
+Contract_Two year
+PaymentMethod_Credit card (automatic)
+PaymentMethod_Electronic check
+PaymentMethod_Mailed check
+TenureBucket_Growing
+TenureBucket_Established
+TenureBucket_Loyal

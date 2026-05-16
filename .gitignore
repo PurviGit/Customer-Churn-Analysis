@@ -1,0 +1,30 @@
+# DATA FILES (too large / has personal data)
+data/telco_churn.csv
+data/X_train.csv
+data/X_test.csv
+data/y_train.csv
+data/y_test.csv
+data/telco_churn_clean.csv
+
+# PYTHON
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+
+# JUPYTER
+.ipynb_checkpoints
+
+# OS FILES
+.DS_Store
+Thumbs.db
+desktop.ini 
+
+# SECRETS (never upload passwords)
+*.env
+config.py
+secrets.py

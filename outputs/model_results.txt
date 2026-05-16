@@ -1,0 +1,15 @@
+=== CHURN PREDICTION MODEL RESULTS ===
+
+Best Model: Random Forest
+Accuracy: 79.2%
+ROC-AUC Score: 0.829
+False Positive Rate: 10.6%
+
+True Positives (Churners caught): 191
+False Negatives (Churners missed): 183
+False Positives (Wrong alerts): 110
+
+Business Impact:
+High-risk customers identified: 196
+Monthly revenue at risk: $12,339
+Potential annual savings (20% retention): $29,614

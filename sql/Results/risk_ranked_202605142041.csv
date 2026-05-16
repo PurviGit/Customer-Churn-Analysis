@@ -1,0 +1,21 @@
+"risk_rank","customerid","tenure","monthly_charges","contract","internetservice","risk_score","risk_category","actual_churn"
+1430,"2302-ANTDP",48,117.45,Month-to-month,Fiber optic,70,HIGH RISK,Yes
+1431,"8016-NCFVO",55,116.50,Month-to-month,Fiber optic,70,HIGH RISK,No
+1432,"7279-BUYWN",41,113.20,Month-to-month,Fiber optic,70,HIGH RISK,Yes
+1130,"0771-WLCLA",16,112.95,Month-to-month,Fiber optic,75,HIGH RISK,No
+231,"1583-IHQZE",12,112.95,Month-to-month,Fiber optic,90,HIGH RISK,Yes
+1433,"9481-IEBZY",72,112.90,Month-to-month,Fiber optic,70,HIGH RISK,No
+1,"3292-PBZEJ",11,111.40,Month-to-month,Fiber optic,100,HIGH RISK,No
+1131,"0115-TFERT",21,111.20,Month-to-month,Fiber optic,75,HIGH RISK,Yes
+1434,"6030-REHUX",28,110.85,Month-to-month,Fiber optic,70,HIGH RISK,No
+1435,"5099-BAILX",43,110.75,Month-to-month,Fiber optic,70,HIGH RISK,Yes
+1435,"1320-REHCS",52,110.75,Month-to-month,Fiber optic,70,HIGH RISK,No
+1437,"3336-JORSO",33,110.45,Month-to-month,Fiber optic,70,HIGH RISK,Yes
+1438,"7576-JMYWV",46,110.20,Month-to-month,Fiber optic,70,HIGH RISK,No
+232,"9851-KIELU",10,110.10,Month-to-month,Fiber optic,90,HIGH RISK,Yes
+1439,"0177-PXBAT",33,109.90,Month-to-month,Fiber optic,70,HIGH RISK,No
+233,"3992-YWPKO",6,109.90,Month-to-month,Fiber optic,90,HIGH RISK,Yes
+1440,"7537-CBQUZ",63,109.40,Month-to-month,Fiber optic,70,HIGH RISK,No
+1440,"9052-VKDUW",65,109.40,Month-to-month,Fiber optic,70,HIGH RISK,No
+1442,"9278-VZKCD",52,109.10,Month-to-month,Fiber optic,70,HIGH RISK,No
+1443,"8495-LJDFO",64,108.95,Month-to-month,Fiber optic,70,HIGH RISK,No
