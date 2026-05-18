@@ -1,14 +1,3 @@
-# ============================================================
-# NOTEBOOK 01 - EXPLORATORY DATA ANALYSIS (EDA)
-# Customer Churn Project
-# ============================================================
-# HOW TO USE THIS FILE:
-# 1. Open Jupyter Notebook: run "jupyter notebook" in terminal
-# 2. Create a new notebook called "01_EDA.ipynb"
-# 3. Copy each CELL block below into a separate Jupyter cell
-# 4. Run cells one by one (Shift+Enter)
-# ============================================================
-
 
 # ── CELL 1: Import Libraries ─────────────────────────────────
 # EXPLANATION: We import all the tools we need upfront.
