@@ -41,6 +41,11 @@ This project finds them. Predicts them. Tells the business exactly what to do ab
 > 📥 **Download the full interactive dashboard:** [`Customer Churn Analysis.pbix`](dashboard/Customer Churn Analysis.pbix) | [`Customer Churn Analysis1.pdf`](dashboard/Customer Churn Analysis1.pdf) | [`Customer Churn Analysis.pbit`](dashboard/Customer Churn Analysis.pbit)
 
 ---
+## 🌐 Live Dashboard Website
+
+[View Live Project](https://PurviGit.github.io/Customer-Churn-Analysis/)
+
+---
 
 ## ⚡ The Results — What I Found
 
