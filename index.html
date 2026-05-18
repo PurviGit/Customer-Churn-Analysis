@@ -209,6 +209,47 @@
       font-size:14px;
       font-weight:600;
     }
+    .workflow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+    margin-top:45px;
+}
+
+.workflow-step{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:18px 24px;
+    border-radius:16px;
+    font-weight:600;
+    color:#e2e8f0;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.workflow-arrow{
+    color:#60a5fa;
+    font-size:1.4rem;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+}
+
+.dashboard-card img{
+    width:100%;
+    height:260px;
+    object-fit:contain;
+    background:#0f172a;
+    padding:10px;
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.dashboard-card:hover img{
+    transform:scale(1.03);
+}
+
+
 
     .recommendations{
       display:grid;
@@ -336,6 +377,64 @@
 
     </section>
 
+    <section class="section">
+
+  <h2 class="section-title">Project Workflow</h2>
+
+  <p class="section-subtitle">
+    End-to-end analytics workflow followed to transform raw telecom customer data into actionable business insights and retention strategies.
+  </p>
+
+  <div class="workflow">
+
+    <div class="workflow-step">
+      SQL Analysis
+    </div>
+
+    <div class="workflow-arrow">
+      →
+    </div>
+
+    <div class="workflow-step">
+      Python EDA
+    </div>
+
+    <div class="workflow-arrow">
+      →
+    </div>
+
+    <div class="workflow-step">
+      Feature Engineering
+    </div>
+
+    <div class="workflow-arrow">
+      →
+    </div>
+
+    <div class="workflow-step">
+      ML Modeling
+    </div>
+
+    <div class="workflow-arrow">
+      →
+    </div>
+
+    <div class="workflow-step">
+      Power BI Dashboard
+    </div>
+
+    <div class="workflow-arrow">
+      →
+    </div>
+
+    <div class="workflow-step">
+      Business Recommendations
+    </div>
+
+  </div>
+
+</section>
+
     <!-- BUSINESS INSIGHTS -->
 
     <section class="section">
@@ -382,136 +481,213 @@
         Interactive 3-page Power BI dashboard built for churn analysis, KPI monitoring, and revenue recovery simulations.
       </p>
 
-      <div class="grid">
+      <!-- DASHBOARD IMAGE 1 -->
 
-        <div class="dashboard-card">
+<div class="dashboard-card">
 
-          <img src="./dashboard/screenshots/page1_executive.png">
+  <a href="./dashboard/screenshots/page1_executive.png" target="_blank">
+    <img src="./dashboard/screenshots/page1_executive.png">
+  </a>
 
-          <div class="dashboard-content">
-            <h3>Executive Overview</h3>
-            <p>
-              Business KPIs, churn metrics, revenue impact analysis, and customer insights.
-            </p>
-          </div>
+  <div class="dashboard-content">
+    <h3>Executive Overview</h3>
+    <p>
+      Business KPIs, churn metrics, revenue impact analysis, and customer insights.
+    </p>
+  </div>
 
-        </div>
+</div>
 
-        <div class="dashboard-card">
 
-          <img src="./dashboard/screenshots/page2_drivers.png">
 
-          <div class="dashboard-content">
-            <h3>Churn Drivers Analysis</h3>
-            <p>
-              Deep dive into tenure, payment behavior, services, and high-risk segments.
-            </p>
-          </div>
+<!-- DASHBOARD IMAGE 2 -->
 
-        </div>
+<div class="dashboard-card">
 
-        <div class="dashboard-card">
+  <a href="./dashboard/screenshots/page2_drivers.png" target="_blank">
+    <img src="./dashboard/screenshots/page2_drivers.png">
+  </a>
 
-          <img src="./dashboard/screenshots/page3_revenue.png">
+  <div class="dashboard-content">
+    <h3>Churn Drivers Analysis</h3>
+    <p>
+      Deep dive into tenure, payment behavior, services, and high-risk segments.
+    </p>
+  </div>
 
-          <div class="dashboard-content">
-            <h3>Revenue & Retention Simulation</h3>
-            <p>
-              What-if analysis estimating recoverable revenue using retention strategies.
-            </p>
-          </div>
+</div>
 
-        </div>
 
-      </div>
 
-    </section>
+<!-- DASHBOARD IMAGE 3 -->
 
-    <!-- ANALYTICS OUTPUTS -->
+<div class="dashboard-card">
 
-    <section class="section">
+  <a href="./dashboard/screenshots/page3_revenue.png" target="_blank">
+    <img src="./dashboard/screenshots/page3_revenue.png">
+  </a>
 
-      <h2 class="section-title">Analytics & Machine Learning Outputs</h2>
+  <div class="dashboard-content">
+    <h3>Revenue & Retention Simulation</h3>
+    <p>
+      What-if analysis estimating recoverable revenue using retention strategies.
+    </p>
+  </div>
 
-      <p class="section-subtitle">
-        Exploratory analysis, feature engineering, and machine learning evaluation performed using Python and Scikit-learn.
-      </p>
+</div>
 
-      <div class="grid">
 
-        <div class="dashboard-card">
-          <img src="./outputs/01_overall_churn_rate.png">
-          <div class="dashboard-content">
-            <h3>Overall Churn Distribution</h3>
-            <p>Distribution of retained vs churned customers.</p>
-          </div>
-        </div>
 
-        <div class="dashboard-card">
-          <img src="./outputs/02_churn_by_contract.png">
-          <div class="dashboard-content">
-            <h3>Contract-Based Churn</h3>
-            <p>Month-to-month contracts were identified as the highest-risk segment.</p>
-          </div>
-        </div>
+<!-- OUTPUT IMAGE 1 -->
 
-        <div class="dashboard-card">
-          <img src="./outputs/03_churn_by_tenure.png">
-          <div class="dashboard-content">
-            <h3>Tenure Analysis</h3>
-            <p>Customer churn was highest during the early subscription period.</p>
-          </div>
-        </div>
+<div class="dashboard-card">
 
-        <div class="dashboard-card">
-          <img src="./outputs/04_revenue_analysis.png">
-          <div class="dashboard-content">
-            <h3>Revenue Impact Analysis</h3>
-            <p>Estimated monthly and annual revenue loss caused by churn.</p>
-          </div>
-        </div>
+  <a href="./outputs/01_overall_churn_rate.png" target="_blank">
+    <img src="./outputs/01_overall_churn_rate.png">
+  </a>
 
-        <div class="dashboard-card">
-          <img src="./outputs/06_correlation_heatmap.png">
-          <div class="dashboard-content">
-            <h3>Correlation Heatmap</h3>
-            <p>Relationship analysis between customer attributes and churn behavior.</p>
-          </div>
-        </div>
+  <div class="dashboard-content">
+    <h3>Overall Churn Distribution</h3>
+    <p>Distribution of retained vs churned customers.</p>
+  </div>
 
-        <div class="dashboard-card">
-          <img src="./outputs/07_model_comparison.png">
-          <div class="dashboard-content">
-            <h3>ML Model Comparison</h3>
-            <p>Comparison of classification models using accuracy and ROC-AUC.</p>
-          </div>
-        </div>
+</div>
 
-        <div class="dashboard-card">
-          <img src="./outputs/08_confusion_matrix.png">
-          <div class="dashboard-content">
-            <h3>Confusion Matrix</h3>
-            <p>Evaluation of model prediction quality and classification performance.</p>
-          </div>
-        </div>
 
-        <div class="dashboard-card">
-          <img src="./outputs/09_roc_curve.png">
-          <div class="dashboard-content">
-            <h3>ROC Curve</h3>
-            <p>Visualization of model discrimination capability and ROC-AUC score.</p>
-          </div>
-        </div>
 
-        <div class="dashboard-card">
-          <img src="./outputs/10_feature_importance.png">
-          <div class="dashboard-content">
-            <h3>Feature Importance</h3>
-            <p>Top business variables contributing to churn prediction.</p>
-          </div>
-        </div>
+<!-- OUTPUT IMAGE 2 -->
 
-      </div>
+<div class="dashboard-card">
+
+  <a href="./outputs/02_churn_by_contract.png" target="_blank">
+    <img src="./outputs/02_churn_by_contract.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Contract-Based Churn</h3>
+    <p>Month-to-month contracts were identified as the highest-risk segment.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 3 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/03_churn_by_tenure.png" target="_blank">
+    <img src="./outputs/03_churn_by_tenure.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Tenure Analysis</h3>
+    <p>Customer churn was highest during the early subscription period.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 4 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/04_revenue_analysis.png" target="_blank">
+    <img src="./outputs/04_revenue_analysis.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Revenue Impact Analysis</h3>
+    <p>Estimated monthly and annual revenue loss caused by churn.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 5 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/06_correlation_heatmap.png" target="_blank">
+    <img src="./outputs/06_correlation_heatmap.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Correlation Heatmap</h3>
+    <p>Relationship analysis between customer attributes and churn behavior.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 6 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/07_model_comparison.png" target="_blank">
+    <img src="./outputs/07_model_comparison.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>ML Model Comparison</h3>
+    <p>Comparison of classification models using accuracy and ROC-AUC.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 7 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/08_confusion_matrix.png" target="_blank">
+    <img src="./outputs/08_confusion_matrix.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Confusion Matrix</h3>
+    <p>Evaluation of model prediction quality and classification performance.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 8 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/09_roc_curve.png" target="_blank">
+    <img src="./outputs/09_roc_curve.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>ROC Curve</h3>
+    <p>Visualization of model discrimination capability and ROC-AUC score.</p>
+  </div>
+
+</div>
+
+
+
+<!-- OUTPUT IMAGE 9 -->
+
+<div class="dashboard-card">
+
+  <a href="./outputs/10_feature_importance.png" target="_blank">
+    <img src="./outputs/10_feature_importance.png">
+  </a>
+
+  <div class="dashboard-content">
+    <h3>Feature Importance</h3>
+    <p>Top business variables contributing to churn prediction.</p>
+  </div>
+
+</div>
 
     </section>
 
