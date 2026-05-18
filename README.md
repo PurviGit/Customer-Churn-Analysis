@@ -45,6 +45,8 @@ This project finds them. Predicts them. Tells the business exactly what to do ab
 
 [View Live Project](https://PurviGit.github.io/Customer-Churn-Analysis/)
 
+[NovyPro Showcase](https://www.novypro.com/create_project/customer-retention--revenue-intelligence-dashboard-1)
+
 ---
 
 ## ⚡ The Results — What I Found
