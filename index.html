@@ -1,300 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Customer Churn & Revenue Intelligence Dashboard</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family:'Inter',sans-serif;
-      background:#0f172a;
-      color:white;
-      line-height:1.7;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .container{
-      width:90%;
-      max-width:1400px;
-      margin:auto;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.7;
     }
 
-    .hero{
-      padding:90px 0 70px;
-      text-align:center;
+    .container {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
     }
 
-    .badge{
-      display:inline-block;
-      padding:10px 18px;
-      border-radius:999px;
-      background:rgba(59,130,246,0.15);
-      color:#93c5fd;
-      font-size:14px;
-      font-weight:600;
-      margin-bottom:25px;
-      border:1px solid rgba(59,130,246,0.3);
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
     }
 
-    h1{
-      font-size:4rem;
-      line-height:1.1;
-      margin-bottom:20px;
-      font-weight:800;
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
 
-    .highlight{
-      color:#60a5fa;
+    h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
 
-    .subtitle{
-      max-width:900px;
-      margin:auto;
-      color:#cbd5e1;
-      font-size:1.2rem;
-      margin-bottom:40px;
+    .highlight {
+      color: #60a5fa;
     }
 
-    .buttons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-bottom:60px;
+    .subtitle {
+      max-width: 900px;
+      margin: auto;
+      color: #cbd5e1;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
     }
 
-    .btn{
-      text-decoration:none;
-      padding:14px 28px;
-      border-radius:12px;
-      font-weight:600;
-      transition:0.3s ease;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
     }
 
-    .primary{
-      background:#3b82f6;
-      color:white;
+    .btn {
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s ease;
     }
 
-    .primary:hover{
-      background:#2563eb;
-      transform:translateY(-2px);
+    .primary {
+      background: #3b82f6;
+      color: white;
     }
 
-    .secondary{
-      border:1px solid rgba(255,255,255,0.15);
-      color:white;
-      background:rgba(255,255,255,0.05);
+    .primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
     }
 
-    .secondary:hover{
-      background:rgba(255,255,255,0.1);
-      transform:translateY(-2px);
+    .secondary {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: white;
+      background: rgba(255, 255, 255, 0.05);
     }
 
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:22px;
-      margin-top:40px;
+    .secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
     }
 
-    .card{
-      background:rgba(255,255,255,0.05);
-      padding:28px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,0.08);
-      box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    .section {
+      padding: 70px 0;
     }
 
-    .card h2{
-      font-size:2.2rem;
-      color:#60a5fa;
-      margin-bottom:10px;
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+      text-align: center;
     }
 
-    .card p{
-      color:#cbd5e1;
+    .section-subtitle {
+      text-align: center;
+      color: #cbd5e1;
+      margin-bottom: 45px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .section{
-      padding:70px 0;
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
     }
 
-    .section-title{
-      font-size:2.5rem;
-      margin-bottom:18px;
-      font-weight:700;
-      text-align:center;
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
-    .section-subtitle{
-      text-align:center;
-      color:#cbd5e1;
-      margin-bottom:45px;
-      max-width:850px;
-      margin-left:auto;
-      margin-right:auto;
+    .card h2 {
+      font-size: 2.2rem;
+      color: #60a5fa;
+      margin-bottom: 10px;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:25px;
+    .card p {
+      color: #cbd5e1;
     }
 
-    .dashboard-card{
-      background:rgba(255,255,255,0.04);
-      border-radius:22px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,0.08);
-      transition:0.3s ease;
-      box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    .tools {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
     }
 
-    .dashboard-card:hover{
-      transform:translateY(-6px);
+    .tool {
+      background: rgba(59, 130, 246, 0.15);
+      color: #bfdbfe;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .dashboard-card img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-      transition:0.3s ease;
+    .workflow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 45px;
     }
 
-    .dashboard-card:hover img{
-      transform:scale(1.03);
+    .workflow-step {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 18px 24px;
+      border-radius: 16px;
+      font-weight: 600;
+      color: #e2e8f0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .dashboard-content{
-      padding:22px;
+    .workflow-arrow {
+      color: #60a5fa;
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
     }
 
-    .dashboard-content h3{
-      margin-bottom:10px;
-      font-size:1.2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
     }
 
-    .dashboard-content p{
-      color:#cbd5e1;
-      font-size:0.95rem;
+    .dashboard-preview .dashboard-card img {
+      height: 320px;
     }
 
-    .tools{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:30px;
+    .dashboard-card {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(96, 165, 250, 0.15);
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
-    .tool{
-      background:rgba(59,130,246,0.15);
-      color:#bfdbfe;
-      padding:10px 18px;
-      border-radius:999px;
-      font-size:14px;
-      font-weight:600;
-    }
-    .workflow{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:18px;
-    margin-top:45px;
-}
-
-.workflow-step{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:18px 24px;
-    border-radius:16px;
-    font-weight:600;
-    color:#e2e8f0;
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
-
-.workflow-arrow{
-    color:#60a5fa;
-    font-size:1.4rem;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-}
-
-.dashboard-card img{
-    width:100%;
-    height:260px;
-    object-fit:contain;
-    background:#0f172a;
-    padding:10px;
-    transition:0.3s ease;
-    cursor:pointer;
-}
-
-.dashboard-card:hover img{
-    transform:scale(1.03);
-}
-
-
-
-    .recommendations{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:22px;
-      margin-top:35px;
+    .dashboard-card:hover {
+      transform: translateY(-6px);
     }
 
-    .recommendation{
-      background:rgba(255,255,255,0.05);
-      padding:24px;
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,0.08);
+    .dashboard-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: contain;
+      background: #111827;
+      padding: 10px;
+      transition: 0.3s ease;
+      cursor: pointer;
     }
 
-    .recommendation h4{
-      margin-bottom:10px;
-      color:#60a5fa;
+    .dashboard-card:hover img {
+      transform: scale(1.03);
     }
 
-    footer{
-      padding:40px 20px;
-      text-align:center;
-      border-top:1px solid rgba(255,255,255,0.08);
-      color:#94a3b8;
-      margin-top:50px;
+    .dashboard-content {
+      padding: 22px;
     }
 
-    footer a{
-      color:#93c5fd;
-      text-decoration:none;
+    .dashboard-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
 
-    @media(max-width:768px){
+    .dashboard-content p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
 
-      h1{
-        font-size:2.8rem;
+    .recommendations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 35px;
+    }
+
+    .recommendation {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .recommendation h4 {
+      margin-bottom: 10px;
+      color: #60a5fa;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    @media(max-width:768px) {
+
+      h1 {
+        font-size: 2.8rem;
       }
 
-      .section-title{
-        font-size:2rem;
+      .section-title {
+        font-size: 2rem;
       }
 
     }
-
   </style>
 
 </head>
@@ -312,30 +309,31 @@
       </div>
 
       <h1>
-        Customer Churn & <span class="highlight">Revenue Intelligence</span> Dashboard
+        Customer Churn &
+        <span class="highlight">Revenue Intelligence</span>
+        Dashboard
       </h1>
 
       <p class="subtitle">
-        End-to-end analytics project using SQL, Python, Machine Learning, and Power BI to identify churn drivers, estimate revenue loss, and simulate customer retention strategies for a telecom business.
+        End-to-end analytics project using SQL, Python, Machine Learning, and Power BI to identify churn drivers,
+        estimate revenue loss, and simulate customer retention strategies for a telecom business.
       </p>
 
       <div class="buttons">
 
         <a class="btn primary"
-           href="https://github.com/PurviGit/Customer-Churn-Analysis"
-           target="_blank">
+          href="https://github.com/PurviGit/Customer-Churn-Analysis"
+          target="_blank">
           View GitHub Repository
         </a>
 
         <a class="btn secondary"
-           href="./dashboard/Customer Churn Analysis1.pdf"
-           target="_blank">
+          href="./dashboard/Customer Churn Analysis1.pdf"
+          target="_blank">
           View Dashboard PDF
         </a>
 
       </div>
-
-      <!-- KPI CARDS -->
 
       <div class="stats">
 
@@ -361,8 +359,6 @@
 
       </div>
 
-      <!-- TECH STACK -->
-
       <div class="tools">
 
         <div class="tool">SQL</div>
@@ -377,63 +373,39 @@
 
     </section>
 
+    <!-- WORKFLOW -->
+
     <section class="section">
 
-  <h2 class="section-title">Project Workflow</h2>
+      <h2 class="section-title">Project Workflow</h2>
 
-  <p class="section-subtitle">
-    End-to-end analytics workflow followed to transform raw telecom customer data into actionable business insights and retention strategies.
-  </p>
+      <p class="section-subtitle">
+        End-to-end analytics workflow followed to transform raw telecom customer data into actionable business insights
+        and retention strategies.
+      </p>
 
-  <div class="workflow">
+      <div class="workflow">
 
-    <div class="workflow-step">
-      SQL Analysis
-    </div>
+        <div class="workflow-step">SQL Analysis</div>
+        <div class="workflow-arrow">→</div>
 
-    <div class="workflow-arrow">
-      →
-    </div>
+        <div class="workflow-step">Python EDA</div>
+        <div class="workflow-arrow">→</div>
 
-    <div class="workflow-step">
-      Python EDA
-    </div>
+        <div class="workflow-step">Feature Engineering</div>
+        <div class="workflow-arrow">→</div>
 
-    <div class="workflow-arrow">
-      →
-    </div>
+        <div class="workflow-step">ML Modeling</div>
+        <div class="workflow-arrow">→</div>
 
-    <div class="workflow-step">
-      Feature Engineering
-    </div>
+        <div class="workflow-step">Power BI Dashboard</div>
+        <div class="workflow-arrow">→</div>
 
-    <div class="workflow-arrow">
-      →
-    </div>
+        <div class="workflow-step">Business Recommendations</div>
 
-    <div class="workflow-step">
-      ML Modeling
-    </div>
+      </div>
 
-    <div class="workflow-arrow">
-      →
-    </div>
-
-    <div class="workflow-step">
-      Power BI Dashboard
-    </div>
-
-    <div class="workflow-arrow">
-      →
-    </div>
-
-    <div class="workflow-step">
-      Business Recommendations
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
     <!-- BUSINESS INSIGHTS -->
 
@@ -481,213 +453,181 @@
         Interactive 3-page Power BI dashboard built for churn analysis, KPI monitoring, and revenue recovery simulations.
       </p>
 
-      <!-- DASHBOARD IMAGE 1 -->
+      <div class="grid dashboard-preview">
 
-<div class="dashboard-card">
+        <div class="dashboard-card">
 
-  <a href="./dashboard/screenshots/page1_executive.png" target="_blank">
-    <img src="./dashboard/screenshots/page1_executive.png">
-  </a>
+          <a href="./dashboard/screenshots/page1_executive.png" target="_blank">
+            <img src="./dashboard/screenshots/page1_executive.png">
+          </a>
 
-  <div class="dashboard-content">
-    <h3>Executive Overview</h3>
-    <p>
-      Business KPIs, churn metrics, revenue impact analysis, and customer insights.
-    </p>
-  </div>
+          <div class="dashboard-content">
+            <h3>Executive Overview</h3>
+            <p>Business KPIs, churn metrics, revenue impact analysis, and customer insights.</p>
+          </div>
 
-</div>
+        </div>
 
+        <div class="dashboard-card">
 
+          <a href="./dashboard/screenshots/page2_drivers.png" target="_blank">
+            <img src="./dashboard/screenshots/page2_drivers.png">
+          </a>
 
-<!-- DASHBOARD IMAGE 2 -->
+          <div class="dashboard-content">
+            <h3>Churn Drivers Analysis</h3>
+            <p>Deep dive into tenure, payment behavior, services, and high-risk segments.</p>
+          </div>
 
-<div class="dashboard-card">
+        </div>
 
-  <a href="./dashboard/screenshots/page2_drivers.png" target="_blank">
-    <img src="./dashboard/screenshots/page2_drivers.png">
-  </a>
+        <div class="dashboard-card">
 
-  <div class="dashboard-content">
-    <h3>Churn Drivers Analysis</h3>
-    <p>
-      Deep dive into tenure, payment behavior, services, and high-risk segments.
-    </p>
-  </div>
+          <a href="./dashboard/screenshots/page3_revenue.png" target="_blank">
+            <img src="./dashboard/screenshots/page3_revenue.png">
+          </a>
 
-</div>
+          <div class="dashboard-content">
+            <h3>Revenue & Retention Simulation</h3>
+            <p>What-if analysis estimating recoverable revenue using retention strategies.</p>
+          </div>
 
+        </div>
 
+      </div>
 
-<!-- DASHBOARD IMAGE 3 -->
+    </section>
 
-<div class="dashboard-card">
+    <!-- ANALYTICS OUTPUTS -->
 
-  <a href="./dashboard/screenshots/page3_revenue.png" target="_blank">
-    <img src="./dashboard/screenshots/page3_revenue.png">
-  </a>
+    <section class="section">
 
-  <div class="dashboard-content">
-    <h3>Revenue & Retention Simulation</h3>
-    <p>
-      What-if analysis estimating recoverable revenue using retention strategies.
-    </p>
-  </div>
+      <h2 class="section-title">Analytics & Machine Learning Outputs</h2>
 
-</div>
+      <p class="section-subtitle">
+        Exploratory analysis, feature engineering, and machine learning evaluation performed using Python and Scikit-learn.
+      </p>
 
+      <div class="grid">
 
+        <div class="dashboard-card">
 
-<!-- OUTPUT IMAGE 1 -->
+          <a href="./outputs/01_overall_churn_rate.png" target="_blank">
+            <img src="./outputs/01_overall_churn_rate.png">
+          </a>
 
-<div class="dashboard-card">
+          <div class="dashboard-content">
+            <h3>Overall Churn Distribution</h3>
+            <p>Distribution of retained vs churned customers.</p>
+          </div>
 
-  <a href="./outputs/01_overall_churn_rate.png" target="_blank">
-    <img src="./outputs/01_overall_churn_rate.png">
-  </a>
+        </div>
 
-  <div class="dashboard-content">
-    <h3>Overall Churn Distribution</h3>
-    <p>Distribution of retained vs churned customers.</p>
-  </div>
+        <div class="dashboard-card">
 
-</div>
+          <a href="./outputs/02_churn_by_contract.png" target="_blank">
+            <img src="./outputs/02_churn_by_contract.png">
+          </a>
 
+          <div class="dashboard-content">
+            <h3>Contract-Based Churn</h3>
+            <p>Month-to-month contracts were identified as the highest-risk segment.</p>
+          </div>
 
+        </div>
 
-<!-- OUTPUT IMAGE 2 -->
+        <div class="dashboard-card">
 
-<div class="dashboard-card">
+          <a href="./outputs/03_churn_by_tenure.png" target="_blank">
+            <img src="./outputs/03_churn_by_tenure.png">
+          </a>
 
-  <a href="./outputs/02_churn_by_contract.png" target="_blank">
-    <img src="./outputs/02_churn_by_contract.png">
-  </a>
+          <div class="dashboard-content">
+            <h3>Tenure Analysis</h3>
+            <p>Customer churn was highest during the early subscription period.</p>
+          </div>
 
-  <div class="dashboard-content">
-    <h3>Contract-Based Churn</h3>
-    <p>Month-to-month contracts were identified as the highest-risk segment.</p>
-  </div>
+        </div>
 
-</div>
+        <div class="dashboard-card">
 
+          <a href="./outputs/04_revenue_analysis.png" target="_blank">
+            <img src="./outputs/04_revenue_analysis.png">
+          </a>
 
+          <div class="dashboard-content">
+            <h3>Revenue Impact Analysis</h3>
+            <p>Estimated monthly and annual revenue loss caused by churn.</p>
+          </div>
 
-<!-- OUTPUT IMAGE 3 -->
+        </div>
 
-<div class="dashboard-card">
+        <div class="dashboard-card">
 
-  <a href="./outputs/03_churn_by_tenure.png" target="_blank">
-    <img src="./outputs/03_churn_by_tenure.png">
-  </a>
+          <a href="./outputs/06_correlation_heatmap.png" target="_blank">
+            <img src="./outputs/06_correlation_heatmap.png">
+          </a>
 
-  <div class="dashboard-content">
-    <h3>Tenure Analysis</h3>
-    <p>Customer churn was highest during the early subscription period.</p>
-  </div>
+          <div class="dashboard-content">
+            <h3>Correlation Heatmap</h3>
+            <p>Relationship analysis between customer attributes and churn behavior.</p>
+          </div>
 
-</div>
+        </div>
 
+        <div class="dashboard-card">
 
+          <a href="./outputs/07_model_comparison.png" target="_blank">
+            <img src="./outputs/07_model_comparison.png">
+          </a>
 
-<!-- OUTPUT IMAGE 4 -->
+          <div class="dashboard-content">
+            <h3>ML Model Comparison</h3>
+            <p>Comparison of classification models using accuracy and ROC-AUC.</p>
+          </div>
 
-<div class="dashboard-card">
+        </div>
 
-  <a href="./outputs/04_revenue_analysis.png" target="_blank">
-    <img src="./outputs/04_revenue_analysis.png">
-  </a>
+        <div class="dashboard-card">
 
-  <div class="dashboard-content">
-    <h3>Revenue Impact Analysis</h3>
-    <p>Estimated monthly and annual revenue loss caused by churn.</p>
-  </div>
+          <a href="./outputs/08_confusion_matrix.png" target="_blank">
+            <img src="./outputs/08_confusion_matrix.png">
+          </a>
 
-</div>
+          <div class="dashboard-content">
+            <h3>Confusion Matrix</h3>
+            <p>Evaluation of model prediction quality and classification performance.</p>
+          </div>
 
+        </div>
 
+        <div class="dashboard-card">
 
-<!-- OUTPUT IMAGE 5 -->
+          <a href="./outputs/09_roc_curve.png" target="_blank">
+            <img src="./outputs/09_roc_curve.png">
+          </a>
 
-<div class="dashboard-card">
+          <div class="dashboard-content">
+            <h3>ROC Curve</h3>
+            <p>Visualization of model discrimination capability and ROC-AUC score.</p>
+          </div>
 
-  <a href="./outputs/06_correlation_heatmap.png" target="_blank">
-    <img src="./outputs/06_correlation_heatmap.png">
-  </a>
+        </div>
 
-  <div class="dashboard-content">
-    <h3>Correlation Heatmap</h3>
-    <p>Relationship analysis between customer attributes and churn behavior.</p>
-  </div>
+        <div class="dashboard-card">
 
-</div>
+          <a href="./outputs/10_feature_importance.png" target="_blank">
+            <img src="./outputs/10_feature_importance.png">
+          </a>
 
+          <div class="dashboard-content">
+            <h3>Feature Importance</h3>
+            <p>Top business variables contributing to churn prediction.</p>
+          </div>
 
+        </div>
 
-<!-- OUTPUT IMAGE 6 -->
-
-<div class="dashboard-card">
-
-  <a href="./outputs/07_model_comparison.png" target="_blank">
-    <img src="./outputs/07_model_comparison.png">
-  </a>
-
-  <div class="dashboard-content">
-    <h3>ML Model Comparison</h3>
-    <p>Comparison of classification models using accuracy and ROC-AUC.</p>
-  </div>
-
-</div>
-
-
-
-<!-- OUTPUT IMAGE 7 -->
-
-<div class="dashboard-card">
-
-  <a href="./outputs/08_confusion_matrix.png" target="_blank">
-    <img src="./outputs/08_confusion_matrix.png">
-  </a>
-
-  <div class="dashboard-content">
-    <h3>Confusion Matrix</h3>
-    <p>Evaluation of model prediction quality and classification performance.</p>
-  </div>
-
-</div>
-
-
-
-<!-- OUTPUT IMAGE 8 -->
-
-<div class="dashboard-card">
-
-  <a href="./outputs/09_roc_curve.png" target="_blank">
-    <img src="./outputs/09_roc_curve.png">
-  </a>
-
-  <div class="dashboard-content">
-    <h3>ROC Curve</h3>
-    <p>Visualization of model discrimination capability and ROC-AUC score.</p>
-  </div>
-
-</div>
-
-
-
-<!-- OUTPUT IMAGE 9 -->
-
-<div class="dashboard-card">
-
-  <a href="./outputs/10_feature_importance.png" target="_blank">
-    <img src="./outputs/10_feature_importance.png">
-  </a>
-
-  <div class="dashboard-content">
-    <h3>Feature Importance</h3>
-    <p>Top business variables contributing to churn prediction.</p>
-  </div>
-
-</div>
+      </div>
 
     </section>
 
@@ -723,7 +663,7 @@
 
     </section>
 
-    <!-- BUSINESS RECOMMENDATIONS -->
+    <!-- RECOMMENDATIONS -->
 
     <section class="section">
 
@@ -733,30 +673,22 @@
 
         <div class="recommendation">
           <h4>Contract Conversion Campaign</h4>
-          <p>
-            Encourage month-to-month customers to move to annual plans to reduce churn risk.
-          </p>
+          <p>Encourage month-to-month customers to move to annual plans to reduce churn risk.</p>
         </div>
 
         <div class="recommendation">
           <h4>First 90-Day Retention Program</h4>
-          <p>
-            Improve onboarding and support during the highest-risk churn period.
-          </p>
+          <p>Improve onboarding and support during the highest-risk churn period.</p>
         </div>
 
         <div class="recommendation">
           <h4>Bundled Service Promotions</h4>
-          <p>
-            Increase customer stickiness by encouraging multi-service adoption.
-          </p>
+          <p>Increase customer stickiness by encouraging multi-service adoption.</p>
         </div>
 
         <div class="recommendation">
           <h4>Auto-Pay Enrollment Drive</h4>
-          <p>
-            Reduce churn by incentivizing customers to switch to automated payments.
-          </p>
+          <p>Reduce churn by incentivizing customers to switch to automated payments.</p>
         </div>
 
       </div>
@@ -774,11 +706,9 @@
       <br>
 
       <p>
-
         <a href="https://github.com/PurviGit" target="_blank">GitHub</a>
         •
         <a href="https://www.linkedin.com/in/purvi-porwal-a6554a258/" target="_blank">LinkedIn</a>
-
       </p>
 
     </footer>
@@ -786,4 +716,5 @@
   </div>
 
 </body>
+
 </html>
