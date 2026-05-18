@@ -1,33 +1,307 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Customer Churn Analysis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Churn & Revenue Optimization Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #1e293b 100%);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      font-weight: 800;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .highlight {
+      color: #60a5fa;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 850px;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .primary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 70px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 28px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 70px;
+    }
+
+    .dashboard-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s ease;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .dashboard-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .dashboard-content {
+      padding: 20px;
+    }
+
+    .dashboard-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .dashboard-content p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .tools {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .tool {
+      background: rgba(59,130,246,0.15);
+      color: #bfdbfe;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero {
+        padding: 60px 7%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Customer Churn & Revenue Optimization Analysis</h1>
 
-  <p>
-    SQL • Power BI • Python • Machine Learning
-  </p>
-  <h2>Dashboard Demo</h2>
+  <section class="hero">
 
-  <img src="screenshots/page1_executive.png" width="900">
+    <div class="badge">
+      Data Analytics Portfolio Project
+    </div>
 
-  <img src="screenshots/page2_drivers.png" width="900">
+    <h1>
+      Customer Churn & <span class="highlight">Revenue Optimization</span> Analysis
+    </h1>
 
-  <img src="screenshots/page3_revenue.png" width="900">
+    <p class="subtitle">
+      End-to-end analytics project using SQL, Python, Machine Learning, and Power BI to identify churn drivers, estimate revenue loss, and simulate customer retention strategies for a telecom business.
+    </p>
 
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/PurviGit" target="_blank">View GitHub</a>
+      <a class="btn secondary" href="dashboard/Churn_Dashboard.pdf" target="_blank">View Dashboard PDF</a>
+    </div>
 
-  <h2>Dashboard PDF</h2>
+    <div class="stats">
 
-  <a href="Customer Churn Analysis1.pdf" target="_blank">
-    View Full Dashboard
-  </a>
+      <div class="card">
+        <h2>26.5%</h2>
+        <p>Overall customer churn rate identified across 7,043 telecom customers.</p>
+      </div>
 
-  <h2>Download Power Bi Template</h2>
-  <a href="Customer Churn Analysis.pbix" target="_blank">
-  </a>
-  
+      <div class="card">
+        <h2>$1.67M</h2>
+        <p>Estimated annual revenue loss caused by customer churn.</p>
+      </div>
+
+      <div class="card">
+        <h2>87%</h2>
+        <p>Random Forest model accuracy used for churn prediction.</p>
+      </div>
+
+      <div class="card">
+        <h2>3 Pages</h2>
+        <p>Interactive Power BI dashboard with KPI tracking and simulations.</p>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Dashboard Preview</h2>
+
+    <div class="dashboard-grid">
+
+      <div class="dashboard-card">
+        <img src="screenshots/page1_executive.png" alt="Executive Dashboard">
+
+        <div class="dashboard-content">
+          <h3>Executive Overview</h3>
+          <p>
+            Business KPIs, churn metrics, revenue impact analysis, and high-level customer insights.
+          </p>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <img src="screenshots/page2_drivers.png" alt="Churn Drivers">
+
+        <div class="dashboard-content">
+          <h3>Churn Drivers Analysis</h3>
+          <p>
+            Deep dive into tenure, contract type, payment behavior, and customer risk patterns.
+          </p>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <img src="screenshots/page3_revenue.png" alt="Revenue Analysis">
+
+        <div class="dashboard-content">
+          <h3>Revenue & Retention Simulation</h3>
+          <p>
+            Interactive what-if analysis estimating recoverable revenue through retention campaigns.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Tools & Technologies</h2>
+
+    <div class="tools">
+      <div class="tool">SQL</div>
+      <div class="tool">PostgreSQL</div>
+      <div class="tool">Python</div>
+      <div class="tool">Pandas</div>
+      <div class="tool">Scikit-learn</div>
+      <div class="tool">Power BI</div>
+      <div class="tool">Machine Learning</div>
+    </div>
+
+  </section>
+
+  <footer>
+    Built by Purvi Porwal • Data Analytics Portfolio Project
+  </footer>
+
 </body>
 </html>
