@@ -419,8 +419,6 @@ jupyter notebook
 
 **Purvi Porwal** — Data Analyst | SQL · Python · Power BI
 
-B.Tech Information Technology · Rajasthan Technical University, Kota · **CGPA 9.69/10**
-
 📧 purviporwal46@gmail.com
 💼 [LinkedIn](https://linkedin.com/in/purvi-porwal-a6554a258)
 🐙 [GitHub](https://github.com/PurviGit)
