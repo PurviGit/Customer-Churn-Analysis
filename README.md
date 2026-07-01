@@ -420,7 +420,7 @@ jupyter notebook
 **Purvi Porwal** — Data Analyst | SQL · Python · Power BI
 
 📧 purviporwal46@gmail.com
-💼 [LinkedIn](https://linkedin.com/in/purvi-porwal-a6554a258)
+💼 [LinkedIn](https://linkedin.com/in/purviporwal)
 🐙 [GitHub](https://github.com/PurviGit)
 
 ---
